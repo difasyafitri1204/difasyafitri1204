@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <title>List Category</title>   
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+            <div class="flex-none px-2 mx-2"></div> 
+                <div class="flex-1 px-2 mx-2">
+                    <div class="items-stretch hidden lg:flex">
+                            <a class="btn btn-ghost btn-sm rounded-btn" href="index.html">
+                                Product List
+                            </a> 
+                            <a class="btn btn-ghost btn-sm rounded-btn" href="List-Category.html">
+                                Category Product
+                            </a> 
+                            <a class="btn btn-ghost btn-sm rounded-btn" href="Transaction.html">
+                                Transaction
+                            </a> 
+                            <a class="btn btn-ghost btn-sm rounded-btn" href="Consumer.html">
+                                Consumer
+                            </a>
+                    </div>      
+                </div>
+            </div>    
+        </div> 
+    </div>
+        <div class="container mx-auto">
+            <div class="flex justify-center gap-5">
+                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <form id="form-Category" action="" onsubmit="event.preventDefault(); saveCategory(this)" >
+                            <input name="index" type="hidden" value="-1">
+                            <div  style="padding-bottom: 10px;">
+                                <label for="names">
+                                    <span class="label-text">names Category</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="text" id="names" name="names" class="input input-primary input-bordered">
+                            </div>
+                            <div style="padding-top: 10px;">
+                                <button id="btn-save-Category" class="btn btn-accent btn-active">save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <div id="List-Category"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+            
+       
+    
+    <script type="text/javascript" src="Category.js"></script>
+</body>
+</html>

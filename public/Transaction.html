@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Transaction Penjual</title>
+</head>
+<body >
+    <div class="container-fluid">
+        <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+            <div class="flex-none px-2 mx-2"></div> 
+        <div class="flex-1 px-2 mx-2">
+        <div class="items-stretch hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li>
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="index.html">
+                        Product List
+                    </a> 
+                </li>
+                <li>
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="List-Category.html">
+                        Category Product
+                    </a> 
+                </li>
+                <li>
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="Transaction.html">
+                        Transaction
+                    </a> 
+                </li>
+                <li>
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="Consumer.html">
+                        Consumer
+                  </a>
+                </li>
+            </ul>
+                
+        </div>
+        </div> 
+        </div>
+        <div class="container mx-auto">
+            <div class="flex justify-center gap-5">
+                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <form id="form-Transaction" action="" onsubmit="event.preventDefault(); saveTransaction(this)">
+                                <input name="index" type="hidden" value="-1">
+                            <div>
+                                <label for="choose_Consumer">Consumer</label>
+                            </div>
+                            <div>
+                                <select class="select select-primary w-full max-w-xs" id="consumer"  name="consumer"><option value="">select consumer</option></select></select>
+                            </div>
+                            <div>
+                                <label for="choose_Product">choose Product</label>
+                            </div>
+                            <div id="app">
+                                <select class="select select-primary w-full max-w-xs" id="list-option" > <option value="">select product</option></select>
+                            </div>
+                                    
+                            <div>
+                                <label for="product">names Product</label>
+                            </div>
+                            <div>
+                                <input type="text" id="product" name="product" class="input input-primary input-bordered" readonly>
+                            </div>
+                            <div>
+                                <label for="price">price Product</label>
+                            </div>
+                            <div>
+                                <input type="number" id="price" name="price" class="input input-primary input-bordered" onkeyup="save();" >
+                            </div>
+                            <div>
+                                <label for="stock">stock Product</label>
+                            </div>
+                            <div>
+                                <input type="number" id="stock" name="stock" class="input input-primary input-bordered"readonly>
+                            </div>
+                            <div>
+                                <label for="pictures">Link pictures Product</label>
+                            </div>  
+                            <div>
+                                <input type="text" id="pictures" name="pictures" class="input input-primary input-bordered"readonly>
+                            </div>
+                            <div>
+                                <label for="amount">amount</label>
+                            </div>  
+                            <div>
+                                <input type="number" id="amount" name="amount" class="input input-primary input-bordered" onkeyup="save();" >
+                            </div>
+                            <div>
+                                <label for="total">Total price</label>
+                            </div>  
+                            <div>
+                                <input type="number" id="total" name="total" class="input input-primary input-bordered" readonly onkeyup="save();">
+                            </div>
+                            <div>
+                                <label for="cash">cash</label>
+                            </div>  
+                            <div>
+                                <input type="text" id="cash" name="cash" class="input input-primary input-bordered" onkeyup="save();" >
+                            </div>
+                            <div>
+                                <label for="changes">changes</label>
+                            </div>  
+                            <div>
+                                <input type="text" id="changes" name="changes" class="input input-primary input-bordered" onkeyup="save();">
+                            </div>
+                            <div style="padding-top: 10px;">
+                                <button id="btn-save-Transaction" class="btn btn-accent btn-active">save</button>
+                            </div>
+                            <!-- <h1 id="histori"></h1> -->
+                        </form>
+                    </div>
+                </div>
+                    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h1 class="card-tittle">Histori Penjualan</h1>
+                            <div id="List-Transaction"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script type="text/javascript" src="Transaction.js"> </script>
+</body>
+</html>
+
+
+
+
+    
+        
